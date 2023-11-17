@@ -1,79 +1,43 @@
-# Module 5 Challenge: Password Generator
+# Password Generator
 
-## Overview
+## Description
 
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+This is a password generator! The html and css, and 20% of the javascript code, were pre-provided by the edX Skills for Life Coding Bootcamp. The rest of the javascript programming is my own.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+This generator will create a completely random and unique password for you at the click of a button. It is customisable based on:
 
-## Instructions
+- your desired length of password
+- which characters you wish you include 
+- what case you wish to include
 
-The following image shows the web application's appearance and functionality:
+## Link To Application
 
-![password generator demo](./assets/05-javascript-challenge-demo.png)
+https://ablam87.github.io/password-generator/
 
+## Installation
 
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 8 characters but no more than 128.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
+N/A
 
-## Grading Requirements
+## Usage
 
-This challenge is graded based on the following criteria: 
+Click the Generate button and you'll be presented with a series of prompts. 
 
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+![java](./assets/Capture%20prompt.PNG)
 
 
-## Review
+Using this information, you will be given a password of your specific requirements:
 
-You are required to submit the following for review:
 
-* The URL of the deployed application.
+![Console](./assets/Capture%20password.PNG)
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Credit 
 
----
+Thanks to the good people at the Bootcamp for knocking up the swell starter files 
 
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+For the password generating randomiser function, I was heavily influenced by the code at the following site:
+
+https://dev.to/code_mystery/random-password-generator-using-javascript-6a
+
+## License
+
+MIT

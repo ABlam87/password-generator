@@ -23,7 +23,7 @@ var randomNumber =0;
 // Function to prompt user for password length and define it for all other functions
 
 function getPasswordLength () {
-  passwordLength = prompt("How long would you like your password to be? Must be between 8-128 characters", "8");
+  passwordLength = prompt("How many characters long would you like your password to be? Must be between 8-128 characters", "8");
 }
 
 // Function to create array of characters for password generator to choose from
