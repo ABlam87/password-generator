@@ -92,6 +92,7 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
+  password="";
   getPasswordLength();
   if (passwordLength == null || passwordLength < 8 || passwordLength > 128) {
       alert('You had one job. Between 8-128 WE SAID. Try again');
