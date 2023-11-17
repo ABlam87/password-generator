@@ -41,17 +41,15 @@ var chars = [];
 var password="";
 var randomNumber =0;
 
-// Function to prompt user for password options
+// Function to prompt user for password length and define it for all other functions
+
 function getPasswordLength () {
   passwordLength = prompt("How long would you like your password to be? Must be between 8-128 characters", "8");
 }
 
-function getPasswordOptions() {
+// Function to create array of characters for password generator to choose from
 
-  if (passwordLength < 8 || passwordLength > 128) {
-    alert('You had one job. Between 8-128 WE SAID. Refresh and try again');
-    return;
-  }
+function getPasswordOptions() {
   if (confirm("Include lowercase letters in your password? Ok for yes, Cancel for no") == true) {
         chars.push(lowerCasedCharacters);
         alert('Lowercase letters added!');
@@ -73,32 +71,21 @@ function getPasswordOptions() {
   } else {alert('No special characters, got it')};
 
   if (chars.length === 1) {
-        alert("ok, you need to actually include SOME characters. You broke the program, congrats. Refresh the page and try not to be such a wang next time");
+        alert("ok, you need to actually include SOME characters. You broke the program, congrats. Try again.");
+        passwordLength == null;
         return; 
   };
     selectedChars = chars.flat(1);
 }
 
-// Function for getting a random element from an array
-function getRandom(chars) {
-  randomNumber = Math.floor(Math.random() * selectedChars.length);
-  password += selectedChars.substring(randomNumber);
-  console.log(password)
-}
-
-
-//getRandom();
-
 // Function to generate password with user input
 
-// function generatePassword() {
-//   for (i = 0; i <= passwordLength; i++) {
-//     randomNumber = Math.floor(Math.random() * chars.length);
-//     password += chars.substring(randomNumber);
-//    };
-  //console.log(randomNumber);
-  //console.log(password);
-//}
+function generatePassword() {
+  for (i = 0; i <= passwordLength-1; i++) {
+    randomNumber = Math.floor(Math.random() * selectedChars.length);
+    password += selectedChars[randomNumber];
+   };
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
@@ -106,8 +93,12 @@ var generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 function writePassword() {
   getPasswordLength();
+  if (passwordLength == null || passwordLength < 8 || passwordLength > 128) {
+      alert('You had one job. Between 8-128 WE SAID. Try again');
+      return;
+  }
   getPasswordOptions();
-  // generatePassword();
+  generatePassword();
   var passwordText = document.querySelector('#password');
   passwordText.value = password;
 }
