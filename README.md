@@ -30,6 +30,8 @@ Using this information, you will be given a password of your specific requiremen
 
 ![Console](./assets/Capture%20password.PNG)
 
+Clicking the button again will wipe the previous password and begin the process again.
+
 ## Credit 
 
 Thanks to the good people at the Bootcamp for knocking up the swell starter files 
